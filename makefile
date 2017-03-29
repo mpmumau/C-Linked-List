@@ -1,7 +1,7 @@
 #==============================================================================
-# Linked List Demo: Makefile
+# Linked List: Makefile
 #------------------------------------------------------------------------------
-# Makefile for compiling an example of a c-based linked list implementation.
+# Makefile for compiling an a c-based linked list implementation.
 #------------------------------------------------------------------------------
 # Created: 	March 21, 2017
 #------------------------------------------------------------------------------
