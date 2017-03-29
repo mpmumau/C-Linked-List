@@ -21,23 +21,19 @@ your project to give you linked list functionality.
 The List type may be used to refer to the list. Typically it will be used as a
 pointer.
 
-`
-#include "list.h"
+`#include "list.h"`
 
-List my_list_obj;
-List *my_list;
+`List my_list_obj;`
+`List *my_list;`
 
-...
-list_sizeof(my_list);
-`
+`...`
+`list_sizeof(my_list);`
 
 or
 
-`
-...
-List *my_list;
-...
-`
+`...`
+`List *my_list;`
+`...`
 
 ## Available Functions
 
