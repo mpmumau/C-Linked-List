@@ -46,10 +46,10 @@ or
 Takes a void pointer of data as well as the address of a head pointer and adds
 it to the end of the list
 
-    #### Example:
+#### Example:
 
-    `List *list;`\s\s
-    `char *data = "Some data";`\s\s
+    `List *list;`
+    `char *data = "Some data";`
     `list_push(&list, (void *) data);`
 
 ### void *list_pop(List **head);
