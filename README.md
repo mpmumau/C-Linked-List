@@ -55,6 +55,18 @@ it to the end of the list
 ### void *list_pop(List **head);
 Remove the final element of the list and return its data.
 
+#### Example:
+
+`List *list;`
+
+`char *orig_data = "Original data";`
+
+`list_push(list, (void *) orig_data);`
+
+`char *data;`
+
+`data = (char *) list_pop(list);`
+
 ### void list_insert(List **head, void *data);
 Insert the data object to the beginning of the list.
 
