@@ -26,9 +26,7 @@ pointer.
     #include "list.h"
 
     List list_obj;
-
     List *my_list = &list_obj;
-
     list_sizeof(my_list);
 
 or
@@ -36,7 +34,6 @@ or
     #include "list.h"
 
     List *my_list;
-
     list_sizeof(my_list);
 
 
@@ -58,13 +55,9 @@ Remove the final element of the list and return its data.
 #### Example:
 
     List *list;
-
     char *orig_data = "Original data";
-
     list_push(&list, (void *) orig_data);
-
     char *data;
-
     data = (char *) list_pop(&list);
 
 ### void list_insert(List **head, void *data);
@@ -73,9 +66,7 @@ Insert the data object to the beginning of the list.
 #### Example
 
     List *list;
-
     char *data = "Some data";
-
     list_insert(&list, (void *) data);
 
 ### unsigned int list_sizeof(List *head);
@@ -84,17 +75,11 @@ Get the size of the list.
 #### Example
 
     List *list;
-
     'char *data = "Some data";'
-
     char *moar_data = "Moar data";
-
     list_push(&list, (void *) data);
-
     list_push(&list, (void *) moar_data);
-
     return list_sizeof(list);
-
     // returns 2
 
 ### List *list_get(List *head, unsigned int index);
@@ -103,11 +88,8 @@ Get the data of the node at the given ordinal number in the list.
 #### Example
 
     List *list;
-
     char *data="Some data";
-
     list_push(&list, data);
-
     char *retrieved_data = list_get(list, 1);
 
 ### void list_remove(List **head, unsigned int index);
@@ -116,11 +98,8 @@ Delete the item in the list at the given ordinal location (1 is the first).
 #### Example
 
     List *list;
-
     char *data = "Some data";
-
     list_push(&list, data);
-
     list_remove(&list, 1);
 
 ## Example Program, Tests
