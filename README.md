@@ -1,11 +1,9 @@
 # C Linked List
-##### Created:  March 21, 2017
 
-##### Author:   Matt Mumau
-
-##### Licensed: MIT License (see included LICENSE file)
-
-##### Repository: https://github.com/mpmumau/c_linked_list
+*Created:*      March 21, 2017  
+*Author:*       Matt Mumau  
+*Licensed:*     MIT License (see included LICENSE file)  
+*Repository:*   https://github.com/mpmumau/c_linked_list  
 
 ## What Is It?
 An implementation of linked lists, written in c. It stores object data in 
