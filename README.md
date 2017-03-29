@@ -23,9 +23,9 @@ pointer.
 
 `#include "list.h"`
 
-`List my_list_obj;`
+`List list_obj;`
 
-`List *my_list;`
+`List *my_list = &list_obj;`
 
 `list_sizeof(my_list);`
 
