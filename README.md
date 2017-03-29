@@ -41,7 +41,7 @@ Also note that the data stored within the linked lists's nodes is pointed to
 by a void pointer. Therefore, you must keep be aware of your own data types, and
 must cast all pointers to data objects as void pointers (void *).
 
-## Available Functions
+## List Utility Functions
 
 ### void list_push(List **head, void *data);
 Takes a void pointer of data as well as the address of a list pointer and add a
