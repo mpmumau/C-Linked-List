@@ -38,14 +38,14 @@ Note that most volatile utility functions take a double pointer (an address to
 a pointer) as a parameter.
 
 Also note that the data stored within the linked lists's nodes is pointed to
-by a void pointer. Therefor, you must keep be aware of your own data types, and
+by a void pointer. Therefore, you must keep be aware of your own data types, and
 must cast all pointers to data objects as void pointers (void *).
 
 ## Available Functions
 
 ### void list_push(List **head, void *data);
-Takes a void pointer of data as well as the address of a head pointer and adds
-it to the end of the list
+Takes a void pointer of data as well as the address of a list pointer and add a
+node containing that data to the end of the list
 
 #### Example:
 
@@ -53,7 +53,7 @@ it to the end of the list
     char *data = "Some data";
     list_push(&list, (void *) data);
 
-### void *list_pop(List **head);
+### void *list_pop(List **head);  
 Remove the final element of the list and return its data.
 
 #### Example:
@@ -64,7 +64,7 @@ Remove the final element of the list and return its data.
     char *data;
     data = (char *) list_pop(&list);
 
-### void list_insert(List **head, void *data);
+### void list_insert(List **head, void *data);  
 Insert the data object to the beginning of the list.
 
 #### Example
@@ -73,7 +73,7 @@ Insert the data object to the beginning of the list.
     char *data = "Some data";
     list_insert(&list, (void *) data);
 
-### unsigned int list_sizeof(List *head);
+### unsigned int list_sizeof(List *head);  
 Get the size of the list.
 
 #### Example
