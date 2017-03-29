@@ -94,7 +94,7 @@ Get the data of the node at the given ordinal number in the list.
 #### Example
 
     List *list;
-    char *data="Some data";
+    char *data = "Some data";
     list_push(&list, data);
     char *retrieved_data = list_get(list, 1);
 
