@@ -81,7 +81,7 @@ Get the size of the list.
 #### Example
 
     List *list;
-    'char *data = "Some data";'
+    char *data = "Some data";
     char *moar_data = "Moar data";
     list_push(&list, (void *) data);
     list_push(&list, (void *) moar_data);
