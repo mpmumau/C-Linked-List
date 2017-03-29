@@ -2,53 +2,56 @@
 # Linked List: Makefile
 #------------------------------------------------------------------------------
 # Makefile for compiling an a c-based linked list implementation.
-#------------------------------------------------------------------------------
+#
 # Created: 	March 21, 2017
-#------------------------------------------------------------------------------
 # Author: 	Matt Mumau
 #==============================================================================
 
-# The c compiler program
+# The c compiler
 CC=gcc
 
 # Project directories
-INCLUDE_DIR=inc
+INC_DIR=inc
 SRC_DIR=src
-OBJECT_DIR=obj
-BIN_DIRECTORY=bin
-LIBRARIES=
+OBJ_DIR=obj
+LIB_DIR=lib
+BIN_DIR=bin
 
 # Compiler flags
-CFLAGS=-I$(INCLUDE_DIR)
+CFLAGS=-I$(INC_DIR)
 
-# Project dependencies
-_DEPENDENCIES = list.h
-DEPENDENCIES = $(patsubst %,$(INCLUDE_DIR)/%,$(_DEPENDENCIES))
+# Project DEPS
+_DEPS = list.h
+DEPS = $(patsubst %,$(INC_DIR)/%,$(_DEPS))
 
-# Project objects
-_OBJECT = main.o list.o
-OBJECT = $(patsubst %,$(OBJECT_DIR)/%,$(_OBJECT))
+# Demo OBJs
+_OBJ_DMO = main.o list.o
+OBJ_DMO = $(patsubst %,$(OBJ_DIR)/%,$(_OBJ))
 
-# Debug objects
-_OBJECT_DEBUG = main.debug.o list.debug.o
-OBJECT_DEBUG = $(patsubst %,$(OBJECT_DIR)/%,$(_OBJECT_DEBUG))
+# Debug OBJs
+_OBJ_DBG = main.debug.o list.debug.o
+OBJ_DBG = $(patsubst %,$(OBJ_DIR)/%,$(_OBJ_DBG))
 
-# A catch-all rule which compiles all files with the .c extension within the 
-# source directory into objects in the object directory.
-$(OBJECT_DIR)/%.o: $(SRC_DIR)/%.c $(DEPENDENCIES)
-	$(CC) -c -o $@ $< $(CFLAGS)
+$(LIB_DIR)/liblist.a: $(OBJ_DIR)/list.o
+	ar rcs $@ $<
 
-$(OBJECT_DIR)/%.debug.o: $(SRC_DIR)/%.c $(DEPENDENCIES)
+$(OBJ_DIR)/list.o: $(SRC_DIR)/list.c $(DEPS)
+	$(CC) -c -o $(OBJ_DIR)/list.o $(SRC_DIR)/list.c $(CFLAGS)
+
+$(OBJ_DIR)/main.o: $(SRC_DIR)/main.c $(DEPS)
+	$(CC) -c -o $(OBJ_DIR)/main.o $(SRC_DIR)/main.c $(CFLAGS)	
+
+$(OBJ_DIR)/%.debug.o: $(SRC_DIR)/%.c $(DEPS)
 	$(CC) -ggdb -c -o $@ $< $(CFLAGS)	
 
-list_test: $(OBJECT)
-	gcc -o $(BIN_DIRECTORY)/$@ $^ $(CFLAGS) $(LIBRARIES)
+demo: $(SRC_DIR)/main.c $(LIB_DIR)/liblist.a
+	gcc -o $(BIN_DIR)/list_demo $(SRC_DIR)/main.c $(CFLAGS) -Llib -llist
 
-debug: $(OBJECT_DEBUG)
-	gcc -ggdb -o $(BIN_DIRECTORY)/list_test.debug $(OBJECT_DEBUG) $(CFLAGS) $(LIBRARIES)
+debug: $(OBJ_DBG)
+	gcc -ggdb -o $(BIN_DIR)/list_demo.debug $(OBJ_DBG) $(CFLAGS)
 
 clean:
-	rm -f $(OBJECT_DIR)/*.o $(OBJECT_DIR)/*.debug.o bin/list_test bin/list_test.debug
+	rm -f $(OBJ_DIR)/*.o $(OBJ_DIR)/*.debug.o $(LIB_DIR)/liblist.a $(BIN_DIR)/list_demo $(BIN_DIR)/list_demo.debug
 
 .PHONY: clean
 	

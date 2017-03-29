@@ -1,4 +1,4 @@
 bin/*
-!bin/.empty
 obj/*
-!obj/.empty
+lib/*
+!*.empty
