@@ -1,6 +1,8 @@
 # Linked List
 Created:  March 21, 2017
+
 Author:   Matt Mumau
+
 Licensed: MIT License (see included LICENSE file)
 
 ## What Is It?
