@@ -9,7 +9,6 @@
  */
 
 // System dependencies
- #include <stdio.h>
  #include <stdlib.h>
 
 // Header
