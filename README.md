@@ -1,9 +1,9 @@
-#Linked List
+# Linked List
 Created:  March 21, 2017
 Author:   Matt Mumau
 Licensed: MIT License (see included LICENSE file)
 
-##What Is It?
+## What Is It?
 An implementation of linked lists, written in c. It stores object data in 
 generic pointers.
 
@@ -12,7 +12,7 @@ A variety of utility functions are included for typical list operations.
 The list object itself is a c struct, which is defined in the list.h header 
 file. You may browse that file for information about list operation functions.
 
-##How Do I Use It?
+## How Do I Use It?
 You may build the linked list source into a static library and include it in
 your project to give you linked list functionality. 
 
@@ -37,14 +37,14 @@ List *my_list;
 ...
 `
 
-##Available Functions
+## Available Functions
 
-###list_push
+### list_push
 `void list_push(List **head, void *data);`
 Takes a void pointer of data as well as the address of a head pointer and adds
 it to the end of the list
 
-###list_pop
+### list_pop
  Remove the final element of the list and return its data.
  */
 void *list_pop(List **head);
@@ -70,7 +70,7 @@ List *list_get(List *head, unsigned int index);
 void list_remove(List **head, unsigned int index);
 
 
-##Example Program, Tests
+## Example Program, Tests
 You may build this project with the included makefile by running simply "make"
 from the command line, at the root directory of this project. This will build
 an executable, list_test, in the bin directory ("bin/list_test").
