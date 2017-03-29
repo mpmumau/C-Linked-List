@@ -24,15 +24,19 @@ pointer.
 `#include "list.h"`
 
 `List my_list_obj;`
+
 `List *my_list;`
 
 `...`
+
 `list_sizeof(my_list);`
 
 or
 
 `...`
+
 `List *my_list;`
+
 `...`
 
 ## Available Functions
