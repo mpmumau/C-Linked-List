@@ -27,23 +27,30 @@ pointer.
 
 `List *my_list;`
 
-`...`
-
 `list_sizeof(my_list);`
 
 or
 
-`...`
+`#include "list.h"`
 
 `List *my_list;`
 
-`...`
+`list_sizeof(my_list);`
+
 
 ## Available Functions
 
 ### void list_push(List **head, void *data);
 Takes a void pointer of data as well as the address of a head pointer and adds
 it to the end of the list
+
+#### Example:
+
+`List *list;`
+
+`char *data = "Some data";`
+
+`list_push(list, (void *) data);`
 
 ### void *list_pop(List **head);
 Remove the final element of the list and return its data.
