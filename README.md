@@ -37,36 +37,24 @@ or
 
 ## Available Functions
 
-### list_push
-`void list_push(List **head, void *data);`
+### void list_push(List **head, void *data);
 Takes a void pointer of data as well as the address of a head pointer and adds
 it to the end of the list
 
-### list_pop
- Remove the final element of the list and return its data.
- */
-void *list_pop(List **head);
+### void *list_pop(List **head);
+Remove the final element of the list and return its data.
 
-/*
- Insert the data object to the beginning of the list.
- */
-void list_insert(List **head, void *data);
+### void list_insert(List **head, void *data);
+Insert the data object to the beginning of the list.
 
-/*
- Get the size of the list.
- */
-unsigned int list_sizeof(List *head);
+### unsigned int list_sizeof(List *head);
+Get the size of the list.
 
-/*
- Get the data of the node at the given ordinal number in the list.
- */
-List *list_get(List *head, unsigned int index);
+### List *list_get(List *head, unsigned int index);
+Get the data of the node at the given ordinal number in the list.
 
-/*
- Delete the item in the list at the given ordinal location (1 is the first).
- */
-void list_remove(List **head, unsigned int index);
-
+### void list_remove(List **head, unsigned int index);
+Delete the item in the list at the given ordinal location (1 is the first).
 
 ## Example Program, Tests
 You may build this project with the included makefile by running simply "make"
