@@ -36,6 +36,12 @@ or
     List *my_list;
     list_sizeof(my_list);
 
+Note that most volatile utility functions take a double pointer (an address to 
+a pointer) as a parameter.
+
+Also note that the data stored within the linked lists's nodes is pointed to
+by a void pointer. Therefor, you must keep be aware of your own data types, and
+must cast all pointers to data objects as void pointers (void *).
 
 ## Available Functions
 
@@ -108,7 +114,7 @@ from the command line, at the root directory of this project. This will build
 an executable, list_test, in the bin directory ("bin/list_test").
 
 The example program runs through a handful of scenarios using the list in order
-to prove its functionality.
+to prove its functionality and prints output to the console.
 
 
 
