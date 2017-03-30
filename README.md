@@ -18,8 +18,16 @@ file. You may browse that file for information about list operation functions.
 You may build the linked list source into a static library and include it in
 your project to give you linked list functionality. 
 
-The List type may be used to refer to the list. Typically it will be used as a
-pointer.
+To do so, run `make` from the command line in the root directory of the list
+project. After compiling, you will find a `liblist.a` file in the `bin` directory
+of this project. You may have to configure your project's compiler options to
+include the library correctly.
+
+## List struct
+
+The `List` struct type may be used to declare a the list. Typically a list should
+be referred to as a pointer to a List, which is itself actually just a single
+node in the linked list.
 
     #include "list.h"
 
@@ -37,7 +45,9 @@ or
 Note that most volatile utility functions take a double pointer (an address to 
 a pointer) as a parameter.
 
-Also note that the data stored within the linked lists's nodes is pointed to
+## Data Types
+
+Note that the data stored within the linked lists's nodes is pointed to
 by a void pointer. Therefore, you must keep be aware of your own data types, and
 must cast all pointers to data objects as void pointers (void *).
 
