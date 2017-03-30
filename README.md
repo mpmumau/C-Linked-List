@@ -117,12 +117,12 @@ Delete the item in the list at the given ordinal location (1 is the first).
     list_remove(&list, 1);
 
 ## Example Program, Tests
-You may build this project with the included makefile by running simply "make"
-from the command line, at the root directory of this project. This will build
-an executable, list_test, in the bin directory ("bin/list_test").
+You may build a demo project with the included makefile by running `make demo`
+from the command line at the root directory of this project. This will build
+an executable, at `bin/list_test`.
 
-The example program runs through a handful of scenarios using the list in order
-to prove its functionality and prints output to the console.
+The example program runs through a handful of scenarios with a list in order
+to prove its functionality with output to the console.
 
 
 
